@@ -1,0 +1,74 @@
+<div [formGroup]="formUser" (ngSubmit)="createTicket()" class="bg-custom-gradient bg-300% animate-gradient-move flex justify-center items-center h-screen">
+    <form class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-6 text-center">Crear Nuevo Ticket</h2>
+
+        <div class="mb-4">
+            <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                class="bg-gray-300 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-300 d"
+                placeholder="Ingresa tu nombre"
+                formControlName="nombre"
+                
+                required
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
+            <input
+                type="text"
+                id="apellido"
+                class=" bg-gray-300 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Ingresa tu apellido"
+                formControlName="apellido"
+                required
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="rut" class="block text-sm font-medium text-gray-700">RUT</label>
+            <input
+                type="text"
+                id="rut"
+                class="bg-gray-300 mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Ingresa tu RUT"
+                formControlName="rut"
+                required
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="asunto" class="block text-sm font-medium text-gray-700">Asunto</label>
+            <input
+                type="text"
+                id="asunto"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Ingresa el asunto"
+                formControlName="asunto"
+                required
+            />
+        </div>
+
+        <div class="mb-4">
+            <label for="descripcion" class="block text-sm font-medium text-gray-700">Descripción</label>
+            <textarea
+                id="descripcion"
+                rows="4"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-blue-300"
+                placeholder="Ingresa la descripción"
+                formControlName="descripcion"
+                required
+            ></textarea>
+        </div>
+
+        <button
+            (submit)="createTicket()"
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full w-full transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
+        >
+            Enviar Ticket
+        </button>
+    </form>
+</div>

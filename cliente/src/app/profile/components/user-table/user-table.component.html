@@ -1,0 +1,80 @@
+<div class="bg-custom-gradient bg-300% animate-gradient-move flex items-center justify-center min-h-screen">
+    <div class="container mx-auto px-4">
+        <div class="overflow-x-auto">
+            <table
+                class="min-w-full bg-white border border-gray-200 rounded-lg"
+                *ngIf="token"
+            >
+                <thead>
+                    <tr>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                        >
+                            Rut
+                        </th>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                        >
+                            Nombre
+                        </th>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                        >
+                            Asunto
+                        </th>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                        >
+                            Estado
+                        </th>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider"
+                        ></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let ticket of tickets" class="hover:bg-gray-50">
+                        <td
+                            class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                        >
+                            {{ ticket.usuario_rut | formatRut }}
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                        >
+                            {{ ticket.usuarios.nombre }}
+                            {{ ticket.usuarios.apellido }}
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                        >
+                            {{ ticket.asunto }}
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                             
+                        >
+                        <span class="px-2 py-1 rounded-full text-white" [ngClass]="ticket?.estado == 'Abierto' ? 'bg-green-500' : 'bg-red-600'" 
+                        >{{
+                            ticket?.estado
+                        }}</span>
+                        </td>
+                        <td
+                            class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                        >
+                            <button
+                                class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded"
+                                [routerLink]="['/admin/ticket', ticket.id]"
+                            >
+                                Ver Más
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div *ngIf="!token">
+                <p>Necesita Atutenticación</p>
+            </div>
+        </div>
+    </div>
+</div>

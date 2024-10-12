@@ -1,0 +1,170 @@
+<div class="bg-white p-8 rounded-lg shadow-md w-96">
+    <h2 class="text-2xl font-bold text-center mb-6">Registro</h2>
+    <form [formGroup]="formUserRegister" (ngSubmit)="onSubmit()">
+        <div class="mb-4">
+            <label for="nombre" class="block text-gray-700">Nombre</label>
+            <input
+                type="text"
+                formControlName="nombre"
+                id="nombre"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Ingrese su nombre"
+                required
+            />
+            <div *ngIf="submitted && f['nombre'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <span>
+                    El nombre es obligatorio
+                </span>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="apellido" class="block text-gray-700">Apellido</label>
+            <input
+                type="text"
+                formControlName="apellido"
+                id="apellido"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Ingrese su apellido"
+                required
+            />
+            <div *ngIf="submitted && f['apellido'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <span>
+                    El Apellido es obligatorio
+                </span>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700">Correo Electrónico</label>
+            <input
+                type="email"
+                formControlName="email"
+                id="email"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Ingrese su correo electrónico"
+                required
+            />
+            <div *ngIf="submitted && f['email'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <div>
+                    <span *ngIf="f['email'].errors['required']">
+                        El Email es obligatorio
+                    </span>
+                </div>
+                <div *ngIf="f['email'].errors['email']">
+                    <span>
+                        El Formato es inválido
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="telefono" class="block text-gray-700">Teléfono</label>
+            <div class="flex items-center space-x-2">
+                <img src="assets/chile.png" alt="Bandera Chilena" class="h-6 w-8" />
+                <input
+                    type="text"
+                    formControlName="telefonoCodigo"
+                    class="mt-1 w-16 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500 bg-slate-300"
+                    readonly
+                    value="+56"
+                />
+                <input
+                    type="text"
+                    formControlName="telefono"
+                    class="mt-1 flex-1 border block border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                    placeholder="Ingrese su número de teléfono"
+                    name="telefono"
+                />
+            </div>
+
+            <div *ngIf="submitted && f['telefono'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <div>
+                    <span *ngIf="f['telefono'].errors['minlength']" >
+                        El teléfono debe tener 9 dígitos.
+                    </span>
+                </div>
+                <div>
+                    <span *ngIf="f['telefono'].errors['onlyNumbers']" >
+                        El teléfono solo debe contener números.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label for="rut" class="block text-gray-700">RUT</label>
+            <input
+                type="text"
+                formControlName="rut"
+                id="rut"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Ingrese su RUT sin puntos ni guíon"
+                required
+            />
+
+            <div *ngIf="submitted && f['rut'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <div>
+                    <span *ngIf="f['rut'].errors['required']">
+                        El RUT es obligatorio
+                    </span>
+                </div>
+                <div *ngIf="f['rut'].errors['invalidRut']">
+                    <span>
+                        El RUT es inválido
+                    </span>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <label for="password" class="block text-gray-700">Contraseña</label>
+            <input
+                type="password"
+                formControlName="password"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Ingrese su contraseña"
+                required
+            />
+        </div>
+
+        <div class="mb-6">
+            <label for="password" class="block text-gray-700">Repita Su Contraseña</label>
+            <input
+                type="password"
+                formControlName="confirmPassword"
+                class="mt-1 block w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:ring-teal-500"
+                placeholder="Repita Su Contraseña"
+                required
+            />
+            <div *ngIf="submitted && f['confirmPassword'].errors" class="bg-red-500 rounded-xl text-center text-white mt-2" >
+                <div>
+                    <span *ngIf="f['confirmPassword'].errors['required']">
+                        Este campo es obligatorio
+                    </span>
+                </div>
+                <div *ngIf="f['confirmPassword'].errors['matching']">
+                    <span>
+                        Las Contraseñas No Coinciden
+                    </span>
+                </div>  
+            </div>
+        </div>
+
+        <button
+            type="submit"
+            class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 rounded"
+        >
+            Registrarse
+        </button>
+    </form>
+    <div class="mt-4 text-center">
+        <p class="text-gray-600">
+            ¿Ya tienes cuenta?
+            <a href="/login" class="text-teal-500 hover:text-teal-700">Iniciar sesión</a>
+        </p>
+    </div>
+</div>

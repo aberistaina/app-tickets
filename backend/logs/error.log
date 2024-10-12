@@ -1,0 +1,14 @@
+2024-09-15 14:38:13 error: Ha ocurrido un error notNull Violation: Ticket.usuario_rut cannot be null
+2024-10-07 20:43:21 error: Ha ocurrido un error Cannot add or update a child row: a foreign key constraint fails (`gestor_tickets`.`tickets`, CONSTRAINT `tickets_ibfk_1` FOREIGN KEY (`usuario_rut`) REFERENCES `usuarios` (`rut`) ON DELETE CASCADE ON UPDATE CASCADE)
+2024-10-09 12:33:37 error: Ha ocurrido un error notNull Violation: Ticket.asunto cannot be null,
+notNull Violation: Ticket.descripcion cannot be null,
+notNull Violation: Ticket.usuario_rut cannot be null
+2024-10-09 12:34:04 error: Ha ocurrido un error notNull Violation: Ticket.asunto cannot be null,
+notNull Violation: Ticket.descripcion cannot be null,
+notNull Violation: Ticket.usuario_rut cannot be null
+2024-10-09 12:35:10 error: Ha ocurrido un error notNull Violation: Ticket.asunto cannot be null,
+notNull Violation: Ticket.descripcion cannot be null,
+notNull Violation: Ticket.usuario_rut cannot be null
+2024-10-09 12:36:31 error: Ha ocurrido un error notNull Violation: Ticket.asunto cannot be null,
+notNull Violation: Ticket.descripcion cannot be null,
+notNull Violation: Ticket.usuario_rut cannot be null

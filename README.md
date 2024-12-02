@@ -85,7 +85,7 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
 
 Este proyecto está construido con las siguientes tecnologías:
 
-- 🐍 **Node.js**: Entorno de ejecución de JavaScript para el backend.
+- 💻 **Node.js**: Entorno de ejecución de JavaScript para el backend.
 - 🧑‍💻 **Angular**: Framework para el desarrollo del frontend.
 - 💾 **MySQL**: Base de datos utilizada para almacenar los tickets y la información de los usuarios.
 - 🔐 **JWT (JSON Web Token)**: Autenticación para las sesiones de los usuarios.

@@ -32,7 +32,7 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
    ```bash
    git clone https://github.com/aberistaina/app-tickets
    
-2. Abre 2 terminales, una para el Cliente y otra para el backend
+2. **Abre 2 terminales, una para el Cliente y otra para el backend**
    
 2. **Navega al directorio del cliente**:
     ```bash

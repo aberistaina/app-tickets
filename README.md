@@ -6,12 +6,12 @@
 
 ## 📋 **Tabla de Contenidos**
 
-- [✨ Características](#características)
-- [💻 Instalación](#instalación)
-- [🔧 Uso](#uso)
-- [⚙️ Tecnologías](#tecnologías)
-- [🔑 Variables de Entorno](#variables-de-entorno)
-- [👥 Autores](#autores)
+- [✨ Características](#-características)
+- [💻 Instalación](#-instalación)
+- [🔧 Uso](#-uso)
+- [⚙️ Tecnologías](#-tecnologías)
+- [🔑 Variables de Entorno](#-variables-de-entorno)
+- [👥 Autores](#-autores)
 
 ---
 

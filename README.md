@@ -52,11 +52,12 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
 
 6. **Crea un archivo .env en el directorio raíz del backend y agrega las siguientes variables de entorno**:
    ```bash
-   DB_HOST=localhost
+   DB_DATABASE=tu_database
    DB_USER=tu_usuario
-   DB_PASSWORD=tu_contraseña
-   DB_NAME=nombre_de_tu_base_de_datos
-   SECRET_KEY=tu_clave_secreta_para_jwt
+   DB_PASSWORD=tu_password
+   DB_HOST=tu_host
+   PORT=tu_port
+   SECRET=tu_clave_secreta_jwt
 
 7. **Levanta el servidor del Frontend:**:
    ```bash

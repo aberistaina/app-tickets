@@ -9,7 +9,7 @@
 - [✨ Características](#-características)
 - [💻 Instalación](#-instalación)
 - [🔧 Uso](#-uso)
-- [⚙️ Tecnologías](#-tecnologías)
+- [⚙️ Tecnologías](#tecnologías)
 - [🔑 Variables de Entorno](#-variables-de-entorno)
 - [👥 Autores](#-autores)
 

@@ -36,7 +36,7 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
    
 2. **Navega al directorio del cliente**:
     ```bash
-    cd ticket-app/client
+    cd app-tickets/client
     
 3. **Instala las dependencias del frontend**:
    ```bash
@@ -44,7 +44,7 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
    
 4. **Navega al directorio del backend**:
    ```bash
-   cd ticket-app/backend
+   cd app-tickets/backend
    
 5. **Instala las dependencias del backend**:
    ```bash

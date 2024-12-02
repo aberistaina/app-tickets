@@ -67,14 +67,6 @@ Para poner en marcha este proyecto en tu máquina local, sigue estos pasos:
    ```bash
    npm run dev
 
-9. **Instala las dependencias del backend**:
-   ```bash
-   npm install
-
-10. **Instala las dependencias del backend**:
-     ```bash
-     npm install
-
 ## 🔧 **Uso**
 
 ### Interacción con la Aplicación:
